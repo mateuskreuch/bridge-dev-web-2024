@@ -1,68 +1,92 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;700&family=Fira+Mono:wght@700&family=Micro+5&display=swap");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+html {
+  --g-color-text-0:    #FFF;
+  --g-color-text-1:    #888;
+  --g-color-primary:   #000;
+  --g-color-accent--2: #0FF;
+  --g-color-accent--1: #00CCF5;
+  --g-color-accent-0:  #09F;
+  --g-color-accent-1:  #03A;
+  --g-color-accent-2:  #00F;
+  --g-color-error--2:  #FF0;
+  --g-color-error--1:  #F5CC00;
+  --g-color-error-0:   #F70;
+  --g-color-error-1:   #A30;
+  --g-color-error-2:   #F00;
+  --g-header-height: 6rem;
+  --g-line-height: 1.5em;
+  --g-line-height-small: 1.1em;
+  --g-font-family-logo: "Fira Mono", monospace;
+  --g-font-family-primary: "IBM Plex Sans", sans-serif;
+  --g-font-family-monospace: "Consolas", "Courier New", monospace;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Generated using https://utopia.fyi */
+  --g-step--2: clamp(0.6944rem, 0.6645rem + 0.1497vi, 0.8442rem);
+  --g-step--1: clamp(0.8333rem, 0.7749rem + 0.2919vi, 1.1253rem);
+  --g-step-0:  clamp(1rem, 0.9rem + 0.5vi, 1.5rem);
+  --g-step-1:  clamp(1.2rem, 1.0401rem + 0.7995vi, 1.9995rem);
+  --g-step-2:  clamp(1.44rem, 1.1949rem + 1.2253vi, 2.6653rem);
+  --g-step-3:  clamp(1.728rem, 1.363rem + 1.8249vi, 3.5529rem);
+  --g-step-4:  clamp(2.0736rem, 1.5411rem + 2.6624vi, 4.736rem);
+  --g-step-5:  clamp(2.4883rem, 1.7234rem + 3.8248vi, 6.3131rem);
+  --g-step-6:  clamp(2.986rem, 1.9001rem + 5.4294vi, 8.4153rem);
+  --g-step-7:  clamp(3.5832rem, 2.0563rem + 7.6345vi, 11.2177rem);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* Box sizing rules */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
-a:hover {
-  color: #535bf2;
+
+/* Remove default margins */
+* {
+  margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+
+  color: var( --g-color-text-0 );
+  background-color: var( --g-color-primary );
+  font-size: var( --g-step-0 );
+  font-family: var( --g-font-family-primary );
+  line-height: var( --g-line-height );
+}
+
+input, button, h1, span {
+  line-height: var( --g-line-height-small );
+}
+
+input, button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  text-wrap: balance;
+  font-size: var( --g-step-4 );
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
 }
