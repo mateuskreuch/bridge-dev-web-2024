@@ -1,6 +1,6 @@
 ## ⚡ Acesso rápido
 
-Você pode acessar o aplicativo pronto aqui:
+Você pode acessar o aplicativo pronto aqui (aviso: o back-end pode estar dormindo e levar um tempo para responder!):
 
 https://mateuskreuch.github.io/desafiobridge/
 
