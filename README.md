@@ -43,7 +43,7 @@ Pronto!
 
 ## 🏃‍♂️ Como rodar?
 
-### - Front-end
+### Front-end
 
 Para rodar o front-end, abra um terminal na pasta raiz do projeto e rode:
 
@@ -52,7 +52,7 @@ cd frontend
 npm run dev
 ```
 
-### - Back-end
+### Back-end
 
 Para rodar o back-end, abra outro terminal na pasta raiz do projeto e rode:
 
@@ -61,7 +61,7 @@ cd backend
 mvnw spring-boot:run
 ```
 
-### - Testes unitários do back-end
+### Testes unitários do back-end
 
 Para rodar os testes unitários do back-end, abra um terminal na pasta raiz do projeto e rode:
 
