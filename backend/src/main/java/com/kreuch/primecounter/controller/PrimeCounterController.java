@@ -1,6 +1,5 @@
-package com.kreuch.primecounter;
+package com.kreuch.primecounter.controller;
 
-import java.util.BitSet;
 import java.util.Locale;
 
 import org.springframework.http.HttpStatus;
@@ -12,21 +11,22 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
-import com.kreuch.primecounter.DTO.PrimeCountResponse;
+import com.kreuch.primecounter.model.PrimeCounterResponse;
+import com.kreuch.primecounter.service.PrimeCounterService;
 
 @RestController
 @CrossOrigin(origins = "*")
 public class PrimeCounterController {
 
     @GetMapping("/pi/{k}")
-    ResponseEntity<PrimeCountResponse> pi(@PathVariable int k) {
+    ResponseEntity<PrimeCounterResponse> pi(@PathVariable int k) {
         long startingTime = System.nanoTime();
-        int count = PrimeCounter.pi(k);
+        int count = PrimeCounterService.pi(k);
         double dt = (System.nanoTime() - startingTime) / 1_000_000.0;
 
         String ms = String.format(Locale.US, "%.3f ms", dt);
 
-        return ResponseEntity.ok().body(new PrimeCountResponse(count, ms));
+        return ResponseEntity.ok().body(new PrimeCounterResponse(count, ms));
     }
 
     @ExceptionHandler(IndexOutOfBoundsException.class)

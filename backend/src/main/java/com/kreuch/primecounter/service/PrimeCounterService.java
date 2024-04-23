@@ -1,12 +1,12 @@
-package com.kreuch.primecounter;
+package com.kreuch.primecounter.service;
 
 import java.util.BitSet;
 
-public class PrimeCounter {
+public class PrimeCounterService {
 
-    static int MAX_K = 100000000;
+    public static int MAX_K = 100000000;
 
-    static int pi(int k) {
+    public static int pi(int k) {
         if (k <= 0) {
             throw new IndexOutOfBoundsException("Número menor ou igual à zero");
         }

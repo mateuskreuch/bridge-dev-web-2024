@@ -1,10 +1,10 @@
-import { PrimeCountRequest, PrimeCountResponse } from "../Model";
+import { PrimeCounterRequest, PrimeCounterResponse } from "../Model";
 
 //----------------------------------------------------------------------------//
 
 const fetchPrimeCount = async (
-  k: PrimeCountRequest
-): Promise<PrimeCountResponse> => {
+  k: PrimeCounterRequest
+): Promise<PrimeCounterResponse> => {
   const response = await fetch(`${import.meta.env.VITE_API_URL}/pi/${k}`, {
     method: 'GET',
     headers: {
@@ -14,7 +14,7 @@ const fetchPrimeCount = async (
   });
 
   if (response.status == 200) {
-    return (await response.json()) as PrimeCountResponse;
+    return (await response.json()) as PrimeCounterResponse;
   } else {
     throw Error(await response.text());
   }

@@ -1,6 +1,6 @@
-export interface PrimeCountResponse {
+export interface PrimeCounterResponse {
   count: number;
   time: string;
 }
 
-export type PrimeCountRequest = number;
+export type PrimeCounterRequest = number;
