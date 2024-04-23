@@ -54,7 +54,7 @@ npm run dev
 
 ### - Back-end
 
-Para rodar o front-end, abra outro terminal na pasta raiz do projeto e rode:
+Para rodar o back-end, abra outro terminal na pasta raiz do projeto e rode:
 
 ```
 cd backend
@@ -63,7 +63,7 @@ mvnw spring-boot:run
 
 ### - Testes unitários do back-end
 
-Para rodar o front-end, abra um terminal na pasta raiz do projeto e rode:
+Para rodar os testes unitários do back-end, abra um terminal na pasta raiz do projeto e rode:
 
 ```
 cd backend
