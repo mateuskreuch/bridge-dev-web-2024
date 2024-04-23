@@ -9,7 +9,6 @@ https://mateuskreuch.github.io/desafiobridge/
 - React com TypeScript
 - Spring Boot
 - emotion.css para CSS in JS
-- js-cookie para salvar o histórico de resultados
 - color-rgba para extrair o RGBA do CSS e injetar na animação WebGL
 - react-router-dom para roteamento
 
